@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Table Layout</title>
+  <style>
+    body {
+      background-color: #fdfde7;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 700px;
+      border: 2px solid #999;
+      margin: 30px auto;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .cell {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .header {
+      background-color: white;
+    }
+
+    .col1 {
+      width: 40%;
+      background-color: #cce6f7;
+    }
+
+    .col2 {
+      width: 30%;
+    }
+
+    .col3 {
+      width: 30%;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+      color: white;
+      text-align: left;
+    }
+
+    .list-title {
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    ol {
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    ul {
+      padding-left: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header Row -->
+  <div class="row header">
+    <div class="cell col1">Column 1</div>
+    <div class="cell col2">Column 2</div>
+    <div class="cell col3">Column 3</div>
+  </div>
+
+  <!-- Content Row 1 -->
+  <div class="row">
+    <div class="cell col1">
+      <div class="list-title">A numbered list:</div>
+      <ol>
+        <li>Able</li>
+        <li>Baker</li>
+        <li>Charlie</li>
+        <li>Delta</li>
+        <li>Echo</li>
+      </ol>
+    </div>
+    <div class="cell col2 yellow">B</div>
+    <div class="cell col3 red">C</div>
+  </div>
+
+  <!-- Content Row 2 -->
+  <div class="row">
+    <div class="cell col1"></div>
+    <div class="cell col2 green" colspan="2" style="width: 60%;">
+      <div class="list-title">An unnumbered list:</div>
+      <ul>
+        <li>Pounds</li>
+        <li>Dollars</li>
+        <li>Euro</li>
+        <li>Yen</li>
+        <li>Roubles</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
